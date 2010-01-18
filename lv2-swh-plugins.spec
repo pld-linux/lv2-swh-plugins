@@ -4,7 +4,7 @@ Summary:	A set of LV2 audio plugins
 Summary(pl.UTF-8):	Zestaw wtyczek dźwiękowych LV2
 Name:		lv2-swh-plugins
 Version:	1.0.15
-Release:	0.1
+Release:	1
 License:	GPL
 Group:		Applications/Sound
 Source0:	http://plugin.org.uk/lv2/%{_name}-%{version}.tar.gz
