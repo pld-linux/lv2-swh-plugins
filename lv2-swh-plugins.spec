@@ -27,7 +27,10 @@ http://plugin.org.uk/).
 %setup -q -n %{_name}-%{version}
 
 %build
-%{__make}
+%{__make} \
+	CC="%{__cc}" \
+	CFLAGS="%{rpmcppflags} %{rpmcflags}" \
+	LDFLAGS="%{rpmcflags} %{rpmldflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
