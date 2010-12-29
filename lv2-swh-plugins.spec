@@ -1,7 +1,7 @@
 %define		_name	swh-lv2
 #
-Summary:	A set of LV2 audio plugins
-Summary(pl.UTF-8):	Zestaw wtyczek dźwiękowych LV2
+Summary:	SWH-LV2 - a set of LV2 audio plugins
+Summary(pl.UTF-8):	SWH-LV2 - zestaw wtyczek dźwiękowych LV2
 Name:		lv2-swh-plugins
 Version:	1.0.15
 Release:	1
@@ -16,12 +16,13 @@ Requires:	lv2core
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-A set of LV2 audio plugins (see http://plugin.org.uk/ for more
-details).
+SWH-LV2 is a set of audio plugins by Steve Harris (see
+<http://plugin.org.uk/> for more details) ported from LADSPA to LV2.
 
 %description -l pl.UTF-8
-Zestaw wtyczek dźwiękowych LV2 (więcej informacji pod adresem
-http://plugin.org.uk/).
+SWH-LV2 to zestaw wtyczek dźwiękowych Steve'a Harrisa (więcej
+informacji pod adresem <http://plugin.org.uk/>) sportowanych ze
+specyfikacji LADSPA do LV2.
 
 %prep
 %setup -q -n %{_name}-%{version}
@@ -44,4 +45,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README
-%attr(755,root,root) %{_libdir}/lv2/*
+%dir %{_libdir}/lv2/*-swh.lv2
+%{_libdir}/lv2/*-swh.lv2/*.ttl
+%attr(755,root,root) %{_libdir}/lv2/*-swh.lv2/*.so
