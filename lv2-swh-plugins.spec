@@ -2,7 +2,7 @@ Summary:	SWH-LV2 - a set of LV2 audio plugins
 Summary(pl.UTF-8):	SWH-LV2 - zestaw wtyczek dźwiękowych LV2
 Name:		lv2-swh-plugins
 Version:	1.0.16
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Applications/Sound
 #Source0Download: https://github.com/swh/lv2/releases
@@ -13,6 +13,8 @@ BuildRequires:	fftw3-single-devel
 BuildRequires:	pkgconfig
 Requires:	lv2core
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define		_noautoprovfiles	%{_libdir}/lv2
 
 %description
 SWH-LV2 is a set of audio plugins by Steve Harris (see
