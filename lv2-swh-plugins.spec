@@ -2,7 +2,7 @@ Summary:	SWH-LV2 - a set of LV2 audio plugins
 Summary(pl.UTF-8):	SWH-LV2 - zestaw wtyczek dźwiękowych LV2
 Name:		lv2-swh-plugins
 Version:	1.0.16
-Release:	2
+Release:	3
 License:	GPL v2+
 Group:		Applications/Sound
 #Source0Download: https://github.com/swh/lv2/releases
@@ -11,7 +11,7 @@ Source0:	https://github.com/swh/lv2/archive/v%{version}/%{name}-%{version}.tar.g
 URL:		http://plugin.org.uk/
 BuildRequires:	fftw3-single-devel
 BuildRequires:	pkgconfig
-Requires:	lv2core
+Requires:	lv2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_noautoprovfiles	%{_libdir}/lv2
